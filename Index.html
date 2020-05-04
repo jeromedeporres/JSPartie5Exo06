@@ -9,23 +9,19 @@
         <form>
             <div class="form-group">
                 <label for="name">Nom :</label> 
-                <input onfocusin="fieldFocusIn(this)" onfocusout="fieldFocusOut(this)" class="form-control" type="text" id="name"/>
-            </div>
-                <div class="form-group">
+                <input onfocus="fieldFocus(id)" onblur="noFocus(id)" class="form-control" type="text" id="name"/>
                 <label for="mail">e-mail :</label>
-                <input onfocusin="fieldFocusIn(this)" onfocusout="fieldFocusOut(this)" class="form-control" type="text" id="mail"/>
-            </div>
-            <div class="form-group">
+                <input onfocus="fieldFocus(id)" onblur="noFocus(id)" class="form-control" type="text" id="mail"/>
                 <label for="msg">Message :</label>
-                <textarea onfocusin="fieldFocusIn(this)" onfocusout="fieldFocusOut(this)" class="form-control" type="text" id="message"></textarea>
+                <textarea onfocus="fieldFocus(id)" onblur="noFocus(id)" class="form-control" type="text" id="message"></textarea>
             </div>
         </form> 
     <script>
-            function fieldFocusIn(x) {
-                x.setAttribute('class', 'form-control border border-dark');
+            function fieldFocus(elementId) {
+            document.getElementById(elementId).style.border = 'black 2px solid';
             }
-            function fieldFocusOut(x) {
-                x.setAttribute('class', 'form-control');
+            function noFocus(elementId) {
+            document.getElementById(elementId).style.border = 'black 2px solid';
             }
     </script>
     </body>
